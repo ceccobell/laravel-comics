@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12 p-2">
                     <div class="content d-flex justify-content-between align-items-center">
