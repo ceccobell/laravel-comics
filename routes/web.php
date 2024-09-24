@@ -13,87 +13,67 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/characters', function () {
+    $comics = config('db.comics');
+
+    $exploreDC = config('db.exploreDC');
+
+    $dc_comics = config('db.dc_comics');
+
+    $shop = config('db.shop');
+
+    $links_footer = config('db.links_footer');
+
+    $social_icons = config('db.social_icons');
+
+    return view('characters', compact('comics', 'exploreDC', 'links_footer', 'shop', 'dc_comics', 'social_icons'));
+})-> name('characters');
+
+Route::get('/movies', function () {
+    return view('movies');
+})-> name('movies');
+
+Route::get('/TV', function () {
+    return view('TV');
+})-> name('TV');
+
+Route::get('/games', function () {
+    return view('games');
+})-> name('games');
+
+Route::get('/videos', function () {
+    return view('videos');
+})-> name('videos');
+
+Route::get('/news', function () {
+    return view('news');
+})-> name('news');
+
+Route::get('/collectibles', function () {
+    return view('collectibles');
+})-> name('collectibles');
+
+Route::get('/fans', function () {
+    return view('fans');
+})-> name('fans');
+
+Route::get('/shop', function () {
+    return view('shop');
+})-> name('shop');
+
 Route::get('/', function () {
-    $comics = config('comics');
+    $comics = config('db.comics');
 
-    $exploreDC = [
-                [
-                    'name' => 'DIGITAL COMICS',
-                    'img' => 'resources/images/buy-comics-digital-comics.png',
-                ],
-                [
-                    'name' => 'DC MERCHANDISE',
-                    'img' => 'resources/images/buy-comics-merchandise.png',
-                ],
-                [
-                    'name' => 'SUBSCRIPTION',
-                    'img' => 'resources/images/buy-comics-subscriptions.png',
-                ],
-                [
-                    'name' => 'COMIC SHOP LOCATOR',
-                    'img' => 'resources/images/buy-comics-shop-locator.png',
-                ],
-                [
-                    'name' => 'DC POWER VISA',
-                    'img' => 'resources/images/buy-dc-power-visa.svg',
-                ]
-    ];
+    $exploreDC = config('db.exploreDC');
 
-    $dc_comics = [
-               ['name' => 'Characters',
-               'url' => '/caracters'], 
-               ['name' => 'Comics',
-               'url' => '/comics'],
-               ['name' => 'Movies',
-               'url' => '/movies'],
-               ['name' => 'TV',
-               'url' => '/TV'],
-               ['name' => 'Games',
-               'url' => '/games'],
-               ['name' => 'Videos',
-               'url' => '/videos'],
-               ['name' => 'News',
-               'url' => '/news'],
-               ['name' => 'Collectibles',
-               'url' => '/collectibles'],
-               ['name' => 'Fans',
-               'url' => '/fans'],
-               ['name' => 'Shop',
-               'url' => '/shop'],
-    ];
+    $dc_comics = config('db.dc_comics');
 
-    $shop = [
-        [
-            'name' => 'Shop DC',
-            'url' => '/shopDC'
-        ],
-        [
-            'name' => 'Shop DC Collectibles',
-            'url' => '/shopDCcollectibles'
-        ]
-    ];
+    $shop = config('db.shop');
 
-    $links_footer = [
-        'dc' => [
-            'title' => 'DC',
-            'items' => [
-                'Terms Of Use', 'Privacy policy(New)', 'Ad Choices', 'Advertising', 'Jobs',
-                'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us'
-            ],
-        ],
-        'sites' => [
-            'title' => 'SITES',
-            'items' => ['DC', 'MAD magazine', 'DC kids', 'DC Universe', 'DC Power Visa'],
-        ]
-    ];
+    $links_footer = config('db.links_footer');
 
-    $social_icons = [
-        'resources/images/footer-facebook.png',
-        'resources/images/footer-twitter.png',
-        'resources/images/footer-youtube.png',
-        'resources/images/footer-pinterest.png',
-        'resources/images/footer-periscope.png'
-    ];
+    $social_icons = config('db.social_icons');
 
     return view('comics', compact('comics', 'exploreDC', 'links_footer', 'shop', 'dc_comics', 'social_icons'));
 })-> name('comics');
+
