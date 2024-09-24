@@ -20,7 +20,7 @@
                                     <a href="" class="text-decoration-none text-black me-3">CHARACTERS</a>
                                 </li>
                                 <li>
-                                    <a href="" class="text-decoration-none text-black me-3">COMICS</a>
+                                    <a href="{{ route('comics')}}" class="text-decoration-none text-black me-3 {{ Route::currentRouteName() === 'comics' ? 'active' : ''}}">COMICS</a>
                                 </li>
                                 <li>
                                     <a href="" class="text-decoration-none text-black me-3">TV</a>

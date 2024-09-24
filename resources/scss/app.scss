@@ -6,6 +6,11 @@
     display: flex;
 }
 
+.active {
+    color: #0282f9 !important;
+    border-bottom: 3px solid #0282f9;
+}
+
 .bg-blue {
     background-color: #0282f9;
 }
