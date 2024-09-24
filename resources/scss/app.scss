@@ -46,3 +46,35 @@
     object-fit: cover;
     object-position: top;
 }
+
+.top-footer {
+    background-image: url("~resources/images/footer-bg.jpg");
+    background-size: cover;
+    min-height: 300px;
+}
+
+.bottom-footer {
+    background-color: #303030;
+}
+
+.bg-image {
+    background-image: url("~resources/images/dc-logo-bg.png");
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+.text-blue {
+    color: #0282f9;
+}
+
+.border-blue {
+    border: 2px solid #0282f9;
+    padding: 10px;
+}
+
+.top-footer ul {
+    padding-left: 0;
+    margin-left: 0;
+}
