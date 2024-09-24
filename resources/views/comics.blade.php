@@ -22,6 +22,20 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12 bg-blue">
+                    <div class="content justify-content-center py-4">
+                        <ul class="d-flex align-items-center list-unstyled m-0 p-0">
+                            @foreach ($exploreDC as $item)
+                            <li class="mx-3 d-flex align-items-center">
+                                <img src="{{ Vite::asset($item['img'])}}" alt="" class="img-fluid icon me-2">
+                                <a href="#" class="text-decoration-none text-white">{{ $item['name'] }}</a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
