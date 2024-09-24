@@ -86,5 +86,14 @@ Route::get('/', function () {
             'items' => ['DC', 'MAD magazine', 'DC kids', 'DC Universe', 'DC Power Visa'],
         ]
     ];
-    return view('comics', compact('comics', 'exploreDC', 'links_footer', 'shop', 'dc_comics'));
+
+    $social_icons = [
+        'resources/images/footer-facebook.png',
+        'resources/images/footer-twitter.png',
+        'resources/images/footer-youtube.png',
+        'resources/images/footer-pinterest.png',
+        'resources/images/footer-periscope.png'
+    ];
+
+    return view('comics', compact('comics', 'exploreDC', 'links_footer', 'shop', 'dc_comics', 'social_icons'));
 })-> name('comics');

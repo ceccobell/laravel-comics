@@ -42,11 +42,9 @@
                         <div class="text-white border-blue">SIGN-UP NOW!</div>
                         <div class="d-flex align-items-center">
                             <div class="text-blue mx-2">FOLLOW US</div>
-                            <img src="{{ Vite::asset('resources/images/footer-facebook.png')}}" alt="" class="mx-2">
-                            <img src="{{ Vite::asset('resources/images/footer-twitter.png')}}" alt="" class="mx-2">
-                            <img src="{{ Vite::asset('resources/images/footer-youtube.png')}}" alt="" class="mx-2">
-                            <img src="{{ Vite::asset('resources/images/footer-pinterest.png')}}" alt="" class="mx-2">
-                            <img src="{{ Vite::asset('resources/images/footer-periscope.png')}}" alt="" class="mx-2">
+                            @foreach ($social_icons as $icon)
+                            <img src="{{ Vite::asset($icon)}}" alt="" class="mx-2">
+                            @endforeach
                         </div>
                     </div>
                 </div>
